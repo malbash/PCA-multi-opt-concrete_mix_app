@@ -297,11 +297,11 @@ def main():
     - Maximize Strength (≥ 90% of target).
     """)
 
-    with st.expander("Model Performance"):
-        st.write(f"**Random Forest** on test set:")
-        st.write(f"- MSE: {mse:.4f}")
-        st.write(f"- MAE: {mae:.4f}")
-        st.write(f"- R²: {r2:.4f}")
+#    with st.expander("Model Performance"):
+#        st.write(f"**Random Forest** on test set:")
+#        st.write(f"- MSE: {mse:.4f}")
+#        st.write(f"- MAE: {mae:.4f}")
+#        st.write(f"- R²: {r2:.4f}")
 
     # 1) Input Type
     input_type = st.radio(
