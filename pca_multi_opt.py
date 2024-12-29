@@ -191,7 +191,7 @@ class ConcreteMixOptimizationProblem(Problem):
 # -------------------------------------------------------------------
 def run_multiobjective_optimization(target_strength, concrete_type, 
                                     algorithm_name="NSGA2",
-                                    pop_size=60, n_gen=40):
+                                    pop_size=150, n_gen=100):
     problem = ConcreteMixOptimizationProblem(concrete_type, target_strength)
     termination = get_termination("n_gen", n_gen)
 
@@ -382,8 +382,8 @@ def main():
                     target_strength=target_strength,
                     concrete_type=concrete_type,
                     algorithm_name=alg,
-                    pop_size=60,
-                    n_gen=40
+                    pop_size=150,
+                    n_gen=100
                 )
                 all_res[alg] = res
             
