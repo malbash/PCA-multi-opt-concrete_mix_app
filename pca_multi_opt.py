@@ -200,7 +200,7 @@ class ConcreteMixOptimizationProblem(Problem):
 def run_multiobjective_optimization(target_strength, concrete_type,
                                     co2_dict, cost_dict,
                                     algorithm_name="NSGA2",
-                                    pop_size=150, n_gen=100):
+                                    pop_size=100, n_gen=200):
     problem = ConcreteMixOptimizationProblem(
         concrete_type, target_strength, co2_dict, cost_dict
     )
@@ -320,7 +320,7 @@ def show_results_for_algorithm(algorithm_name, res, best_solution, units):
 # STREAMLIT APP
 # -------------------------------------------------------------------
 def main():
-    st.title("PCA - Concrete Mix Optimizer")
+    st.title("PCA - Multi-Objective Concrete Mix Optimizer")
 
     # Show model performance
     with st.expander("Model Performance"):
