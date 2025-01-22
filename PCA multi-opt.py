@@ -299,7 +299,7 @@ def show_results_for_algorithm(algorithm_name, res, best_solution, units):
 # MAIN STREAMLIT APP
 # -------------------------------------------------------------------
 def main():
-    st.title("PCA - Concrete Mix Optimizer")
+    st.title("Concrete Mix Optimizer")
 
     # Show model performance
     with st.expander("Model Performance"):
