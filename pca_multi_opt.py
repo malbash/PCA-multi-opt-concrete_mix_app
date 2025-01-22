@@ -316,36 +316,15 @@ def show_results_for_algorithm(algorithm_name, res, best_solution, units):
     fig = plot_evolution(res.history, algorithm_name)
     st.pyplot(fig)
 
-# -------------------------------------------------------------------
-# STREAMLIT APP
-# -------------------------------------------------------------------
-import streamlit as st
-
 def main():
     st.title("Multi-Objective Concrete Mix Optimizer")
 
-    # Centering the content using markdown and CSS
-    st.markdown(
-        """
-        <style>
-        .centered {
-            text-align: center;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # Show model performance in the center
+    # Show model performance
     with st.expander("Model Performance"):
-        st.markdown('<div class="centered"><h3>Random Forest Performance:</h3></div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="centered">MSE = {mse:.4f}</div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="centered">MAE = {mae:.4f}</div>', unsafe_allow_html=True)
-        st.markdown(f'<div class="centered">R² = {r2:.4f}</div>', unsafe_allow_html=True)
-
-if __name__ == "__main__":
-    main()
-
+        st.write(f"Random Forest Performance:")
+        st.write(f"- MSE={mse:.4f}")
+        st.write(f"- MAE={mae:.4f}")
+        st.write(f"- R²={r2:.4f}")
     # 1) Input Type
     input_type = st.radio("Select Input Type:", ["Target Strength", "Ingredients"], index=0)
 
